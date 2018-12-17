@@ -7,12 +7,12 @@ Part 1. DataStruct
 
 Part 2. LeetCode
 
-| ID | Problem | Official<br/>Solution | C++ | Python |
-| --- | --- | :---: | :--- | :--- | :--- |
+
+| ID | Problem | Official Solution | C++ | Python |
+| --- | --- | :---: | :--- | :--- |
 | 001 | [Two Sum](https://leetcode.com/problems/two-sum/description/) | [solution](https://leetcode.com/problems/two-sum/solution/) | [C++](leetcode/001_TwoNum_#1.cpp) | |
 | 002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/) | [solution](https://leetcode.com/problems/add-two-numbers/solution/) | [C++](leetcode/002_AddTwoNumbers#2.cpp) | |
 | 003 | [Longest-Substring-Without-Repeating-Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) | [solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/solution/) | [C++](leetcode/003_LongestSubstringWithoutRepeatingCharacters#2.cpp) | |
-
 
 
 Part 3. SwordOffer
