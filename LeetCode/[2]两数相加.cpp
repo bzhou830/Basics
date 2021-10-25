@@ -15,18 +15,41 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+
+//Definition for singly-linked list.
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        
+        ListNode* l = new List(0);
+        ListNode* head = l;
+        int carry = 0;
+        while(l1 || l2){
+            l->next = new ListNode(carry);
+            if (l1) {
+                l->next->val += l1->val;
+                l1 = l1->next;
+            }
+
+            if (l2) {
+                l->next->val += l2->val;
+                l2 = l2->next;
+            }
+
+            if (l->next->val >= 10) {
+                carry = 1;
+                l->next->val = l->next->val % 10;
+            }
+            l = l->next;
+        }
+        head = l->next;
+        delete l;
+        return head;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
