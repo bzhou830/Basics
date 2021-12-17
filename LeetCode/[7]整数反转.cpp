@@ -29,7 +29,15 @@
 class Solution {
 public:
     int reverse(int x) {
-        
+        int ret = 0;
+        while (x != 0) {
+            int temp = ret * 10 + x % 10;
+            if (temp / 10 != ret)
+                return 0;
+            ret = temp;
+            x /= 10;
+        }
+        return ret;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
