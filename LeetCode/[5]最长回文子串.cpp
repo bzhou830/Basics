@@ -20,7 +20,18 @@
 class Solution {
 public:
     string longestPalindrome(string s) {
-        
+        int res = 0;
+        bool mid = false;
+        unordered_map<char, int> m;
+        for (char c : s) ++m[c];
+        for (auto it = m.begin(); it != m.end(); ++it) {
+            res += it->second;
+            if (it->second % 2 == 1) {
+                res -= 1;
+                mid = true;
+            } 
+        }
+        return mid ? res + 1 : res;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
